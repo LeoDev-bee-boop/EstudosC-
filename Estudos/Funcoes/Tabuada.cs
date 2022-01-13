@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace console_app.Funcoes
+namespace Funcoes
 {
     class Tabuada
     {

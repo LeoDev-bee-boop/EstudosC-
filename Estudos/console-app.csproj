@@ -71,6 +71,7 @@
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Funcoes\Genericas.cs" />
     <Compile Include="Funcoes\Tabuada.cs" />
+    <Compile Include="Funcoes\TelaCliente.cs" />
     <Compile Include="Pastas\Arquivo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

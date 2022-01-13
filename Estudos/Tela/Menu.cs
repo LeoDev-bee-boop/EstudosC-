@@ -1,5 +1,5 @@
 ﻿using Calculo;
-using console_app.Funcoes;
+using Funcoes;
 using Diretorio;
 using System;
 using System.Collections.Generic;
@@ -15,21 +15,20 @@ namespace Tela
         public const int LER_ARQUIVOS = 1;
         public const int TABUADA = 2;
         public const int CALCULO_MEDIA = 3;
-
+        public const int CADASTRAR_CLIENTE = 4;
+       
         public static void Criar()
         {
             while (true)
             {
-                string msg = "Olá usuário, bem vindo ao programa \n" +
-                    "\n Utilizando programação funcional" +
-                    "\n\n" +
-                    "\n Digite uma das opções a baixo: \n" +
+                string msg = "\n Digite uma das opções a baixo: \n" +
                     "\n     0 - Sair do programa \n" +
                     "\n     1 - Para ler aquivos \n" +
                     "\n     2 - Para executar a tabuada \n" +
-                    "\n     3 - Caluclar a media dos alunos \n";
+                    "\n     3 - Caluclar a media dos alunos \n" +
+                    "\n     4 - Cadastrar Clientes \n";
 
-                Console.WriteLine(msg);
+            Console.WriteLine(msg);
 
                 int valor = int.Parse(Console.ReadLine());
 
@@ -50,7 +49,10 @@ namespace Tela
                     case 3:
                         Media.CalcularMediaAluno();
                         break;
-                }
+                    case 4:
+                        TelaCliente.Chamar();
+                        break;
+            }
 
 
             }

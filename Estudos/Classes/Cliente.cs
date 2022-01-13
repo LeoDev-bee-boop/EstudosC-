@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace console_app.Classes
+namespace Classes
 {
     public class Cliente
     {
@@ -35,17 +35,22 @@ namespace console_app.Classes
             if (File.Exists(caminhoBaseArquivo()))
             {
                 StreamWriter r = new StreamWriter(caminhoBaseArquivo());
-                string conteudo = "nome;telefone;cpf;\n";
+                string conteudo = "nome;telefone;cpf;";
                 r.WriteLine(conteudo);
 
                 foreach (Cliente c in clientes)
                 {
-                    var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";\n";
+                    var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";";
                     r.WriteLine(linha);
                 }
 
                 r.Close();
             }
+        }
+
+        private void Olhar()
+        {
+            Console.WriteLine("O cliente" + this.Nome + " está olhando para mim");
         }
 
         private static string caminhoBaseArquivo()
