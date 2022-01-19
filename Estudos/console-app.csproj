@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>console_app</RootNamespace>
     <AssemblyName>console_app</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculo\Media.cs" />
+    <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Funcoes\Genericas.cs" />
     <Compile Include="Funcoes\Tabuada.cs" />

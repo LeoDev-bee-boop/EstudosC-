@@ -17,7 +17,15 @@ namespace console_app
     {
         static void Main(string[] args)
         {
-            Menu.Criar();            
+            Menu.Criar();
+            Usuario usu = new Usuario();
+
+            usu.Nome = "aa";
+            usu.Telefone = "213";
+            usu.CPF = "5495430";
+
+            usu.Gravar();
+
         }
 
     }

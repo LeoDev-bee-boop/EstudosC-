@@ -29,22 +29,45 @@ namespace Classes
 
         public void Gravar()
         {
-            var clientes = Cliente.LerClientes();
-            clientes.Add(this);
-
-            if (File.Exists(caminhoBaseArquivo()))
-            {
-                StreamWriter r = new StreamWriter(caminhoBaseArquivo());
-                string conteudo = "nome;telefone;cpf;";
-                r.WriteLine(conteudo);
-
-                foreach (Cliente c in clientes)
+            if(this.GetType() == typeof(Cliente)) 
                 {
-                    var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";";
-                    r.WriteLine(linha);
-                }
+            
+                var clientes = Cliente.LerClientes();
+                clientes.Add(this);
 
-                r.Close();
+                if (File.Exists(caminhoBaseClientes()))
+                {
+                    StreamWriter r = new StreamWriter(caminhoBaseClientes());
+                    string conteudo = "nome;telefone;cpf;";
+                    r.WriteLine(conteudo);
+
+                    foreach (Cliente c in clientes)
+                    {
+                        var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";";
+                        r.WriteLine(linha);
+                    }
+
+                    r.Close();
+                }
+            } else
+            {
+                var usuario = Usuario.LerClientes();
+                usuario.Add(this);
+
+                if (File.Exists(caminhoBaseClientes()))
+                {
+                    StreamWriter r = new StreamWriter(caminhoBaseClientes());
+                    string conteudo = "nome;telefone;cpf;";
+                    r.WriteLine(conteudo);
+
+                    foreach (Usuario c in usuario)
+                    {
+                        var linha = c.Nome + ";" + c.Telefone + ";" + c.CPF + ";";
+                        r.WriteLine(linha);
+                    }
+
+                    r.Close();
+                }
             }
         }
 
@@ -53,17 +76,22 @@ namespace Classes
             Console.WriteLine("O cliente" + this.Nome + " está olhando para mim");
         }
 
-        private static string caminhoBaseArquivo()
+        private static string caminhoBaseClientes()
         {
             return ConfigurationManager.AppSettings["BaseDeClientes"];
+        }
+
+        private static string caminhoBaseUsuario()
+        {
+            return ConfigurationManager.AppSettings["BaseDeUsuarios"];
         }
 
         public static List<Cliente> LerClientes()
         {
             var clientes = new List<Cliente>();
-            if (File.Exists(caminhoBaseArquivo()))
+            if (File.Exists(caminhoBaseClientes()))
             {
-                using (StreamReader arquivo = File.OpenText(caminhoBaseArquivo()))
+                using (StreamReader arquivo = File.OpenText(caminhoBaseClientes()))
                 {
                     string linha;
                     int i = 0;
