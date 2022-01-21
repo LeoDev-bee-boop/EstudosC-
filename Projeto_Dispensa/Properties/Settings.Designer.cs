@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dispensa.Properties
+namespace Projeto_Dispensa.Properties
 {
 
 

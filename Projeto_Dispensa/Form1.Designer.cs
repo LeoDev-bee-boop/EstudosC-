@@ -1,4 +1,4 @@
-﻿namespace Dispensa
+﻿namespace Projeto_Dispensa
 {
     partial class Form1
     {

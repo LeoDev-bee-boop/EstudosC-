@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Dispensa")]
+[assembly: AssemblyTitle("Projeto_Dispensa")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Dispensa")]
+[assembly: AssemblyProduct("Projeto_Dispensa")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8a680b52-3083-47c4-81cf-9f37ea7ef66e")]
+[assembly: Guid("8a1add70-9766-4615-a1c0-b3d1806bb0e2")]
 
 // Version information for an assembly consists of the following four values:
 //
