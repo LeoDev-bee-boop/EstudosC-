@@ -36,5 +36,22 @@ namespace Projeto_Dispensa
                 dataGridView1.Rows.Add(campo);
             }
         }
+
+        
+
+        private void butMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void butClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void butMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

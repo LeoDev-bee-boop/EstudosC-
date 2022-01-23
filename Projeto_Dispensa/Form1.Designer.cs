@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.butMinimize = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.butMaximize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butClose = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,16 +48,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.butMinimize);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.butMaximize);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.butClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // butMinimize
+            // 
+            this.butMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.butMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.butMinimize.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.minimize;
+            this.butMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butMinimize.FlatAppearance.BorderSize = 0;
+            this.butMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butMinimize.ForeColor = System.Drawing.Color.Transparent;
+            this.butMinimize.Location = new System.Drawing.Point(585, 4);
+            this.butMinimize.Name = "butMinimize";
+            this.butMinimize.Size = new System.Drawing.Size(42, 33);
+            this.butMinimize.TabIndex = 4;
+            this.butMinimize.UseVisualStyleBackColor = false;
+            this.butMinimize.Click += new System.EventHandler(this.butMinimize_Click);
             // 
             // label1
             // 
@@ -69,37 +87,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Dispensa Inteligênte";
             // 
-            // button2
+            // butMaximize
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.butMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.minimize;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(585, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 33);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.maximize;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(633, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 33);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = false;
+            this.butMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.butMaximize.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.maximize;
+            this.butMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butMaximize.FlatAppearance.BorderSize = 0;
+            this.butMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butMaximize.ForeColor = System.Drawing.Color.Transparent;
+            this.butMaximize.Location = new System.Drawing.Point(633, 4);
+            this.butMaximize.Name = "butMaximize";
+            this.butMaximize.Size = new System.Drawing.Size(42, 33);
+            this.butMaximize.TabIndex = 3;
+            this.butMaximize.UseVisualStyleBackColor = false;
+            this.butMaximize.Click += new System.EventHandler(this.butMaximize_Click);
             // 
             // pictureBox1
             // 
@@ -113,21 +116,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // butClose
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.butClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.cross;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(681, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 33);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
+            this.butClose.BackColor = System.Drawing.Color.Transparent;
+            this.butClose.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.cross;
+            this.butClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butClose.FlatAppearance.BorderSize = 0;
+            this.butClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butClose.ForeColor = System.Drawing.Color.Transparent;
+            this.butClose.Location = new System.Drawing.Point(681, 4);
+            this.butClose.Name = "butClose";
+            this.butClose.Size = new System.Drawing.Size(42, 33);
+            this.butClose.TabIndex = 2;
+            this.butClose.UseVisualStyleBackColor = false;
+            this.butClose.Click += new System.EventHandler(this.butClose_Click);
             // 
             // dataGridView1
             // 
@@ -137,9 +141,11 @@
             this.tipo,
             this.marca,
             this.quantidade,
-            this.validade});
+            this.validade,
+            this.tamanho});
             this.dataGridView1.Location = new System.Drawing.Point(12, 57);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(702, 469);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -163,6 +169,11 @@
             this.validade.HeaderText = "Validade";
             this.validade.Name = "validade";
             // 
+            // tamanho
+            // 
+            this.tamanho.HeaderText = "Tamanho";
+            this.tamanho.Name = "tamanho";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +183,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -187,14 +199,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butMinimize;
+        private System.Windows.Forms.Button butMaximize;
+        private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn validade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
     }
 }
 
