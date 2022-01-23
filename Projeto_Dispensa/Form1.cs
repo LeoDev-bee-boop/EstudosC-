@@ -20,20 +20,26 @@ namespace Projeto_Dispensa
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            fcnCarregaGrid();
+        
         }
 
-        private void fcnCarregaGrid()
+        private void fcnImportaArquivo()
         {
-            StreamReader csv = new StreamReader(@"C:\Users\User\Desktop\TESTE_CSV.csv");
+            OpenFileDialog ofd = new OpenFileDialog();
 
-            string linha;
-            string[] campo;
-
-            while((linha = csv.ReadLine()) != null)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                campo = linha.Split(';');
-                dataGridView1.Rows.Add(campo);
+                txtCaminhoArquivo.Text = ofd.FileName;
+                var sr = new StreamReader(ofd.FileName);
+
+                string linha;
+                string[] campo;
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    campo = linha.Split(';');
+                    dataGridView1.Rows.Add(campo);
+                }
             }
         }
 
@@ -52,6 +58,11 @@ namespace Projeto_Dispensa
         private void butMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void butImportarArquivo_Click(object sender, EventArgs e)
+        {
+            fcnImportaArquivo();
         }
     }
 }

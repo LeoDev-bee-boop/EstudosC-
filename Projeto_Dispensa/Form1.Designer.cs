@@ -40,6 +40,9 @@
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtCaminhoArquivo = new System.Windows.Forms.TextBox();
+            this.butImportarArquivo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -135,6 +138,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -143,10 +149,10 @@
             this.quantidade,
             this.validade,
             this.tamanho});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 469);
+            this.dataGridView1.Size = new System.Drawing.Size(719, 449);
             this.dataGridView1.TabIndex = 1;
             // 
             // tipo
@@ -174,11 +180,43 @@
             this.tamanho.HeaderText = "Tamanho";
             this.tamanho.Name = "tamanho";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(594, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Adicionar Item";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtCaminhoArquivo
+            // 
+            this.txtCaminhoArquivo.Location = new System.Drawing.Point(4, 50);
+            this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
+            this.txtCaminhoArquivo.ReadOnly = true;
+            this.txtCaminhoArquivo.Size = new System.Drawing.Size(449, 20);
+            this.txtCaminhoArquivo.TabIndex = 3;
+            // 
+            // butImportarArquivo
+            // 
+            this.butImportarArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butImportarArquivo.Location = new System.Drawing.Point(459, 48);
+            this.butImportarArquivo.Name = "butImportarArquivo";
+            this.butImportarArquivo.Size = new System.Drawing.Size(129, 23);
+            this.butImportarArquivo.TabIndex = 4;
+            this.butImportarArquivo.Text = "Importar Arquivo";
+            this.butImportarArquivo.UseVisualStyleBackColor = true;
+            this.butImportarArquivo.Click += new System.EventHandler(this.butImportarArquivo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 538);
+            this.Controls.Add(this.butImportarArquivo);
+            this.Controls.Add(this.txtCaminhoArquivo);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,6 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,6 +247,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn validade;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtCaminhoArquivo;
+        private System.Windows.Forms.Button butImportarArquivo;
     }
 }
 
