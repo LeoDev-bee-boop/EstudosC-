@@ -20,18 +20,15 @@ namespace Projeto_Dispensa
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
+            
         }
 
-        private void fcnImportaArquivo()
+        private void fcnCarregaGrid()
         {
             OpenFileDialog ofd = new OpenFileDialog();
-
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                txtCaminhoArquivo.Text = ofd.FileName;
                 var sr = new StreamReader(ofd.FileName);
-
                 string linha;
                 string[] campo;
 
@@ -60,9 +57,23 @@ namespace Projeto_Dispensa
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void butImportarArquivo_Click(object sender, EventArgs e)
+        private void butAdicionarAlimento_Click(object sender, EventArgs e)
         {
-            fcnImportaArquivo();
+            fcnCarregaGrid();
+            fcnCustomizaGrid();
+        }
+
+        private void fcnCustomizaGrid()
+        {
+            //var a = dataGridView1.Rows[1].Cells[2].Value;
+            // txtTeste.Text = (string)a;
+
+            int a = dataGridView1.Rows.Count;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+
+            }
+
         }
     }
 }
