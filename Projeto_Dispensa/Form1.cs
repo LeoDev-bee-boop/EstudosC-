@@ -60,12 +60,20 @@ namespace Projeto_Dispensa
         private void butAdicionarAlimento_Click(object sender, EventArgs e)
         {
             fcnCarregaGrid();
+            fcnCustomizaGrid();
         }
 
-        private void butCapturaLinha_Click(object sender, EventArgs e)
+        private void fcnCustomizaGrid()
         {
-            var a = dataGridView1.Rows[1].Cells[2].Value;
-            txtTeste.Text = (string)a;
+            //var a = dataGridView1.Rows[1].Cells[2].Value;
+            // txtTeste.Text = (string)a;
+
+            int a = dataGridView1.Rows.Count;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+
+            }
+
         }
     }
 }

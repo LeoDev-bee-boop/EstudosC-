@@ -180,7 +180,7 @@
             // 
             // butAdicionarAlimento
             // 
-            this.butAdicionarAlimento.Location = new System.Drawing.Point(597, 48);
+            this.butAdicionarAlimento.Location = new System.Drawing.Point(597, 49);
             this.butAdicionarAlimento.Name = "butAdicionarAlimento";
             this.butAdicionarAlimento.Size = new System.Drawing.Size(117, 35);
             this.butAdicionarAlimento.TabIndex = 2;
@@ -203,7 +203,6 @@
             this.butCapturaLinha.TabIndex = 4;
             this.butCapturaLinha.Text = "Captura linha";
             this.butCapturaLinha.UseVisualStyleBackColor = true;
-            this.butCapturaLinha.Click += new System.EventHandler(this.butCapturaLinha_Click);
             // 
             // Form1
             // 
