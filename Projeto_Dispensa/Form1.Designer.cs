@@ -40,6 +40,9 @@
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.butAdicionarAlimento = new System.Windows.Forms.Button();
+            this.txtTeste = new System.Windows.Forms.TextBox();
+            this.butCapturaLinha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -135,6 +138,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -143,10 +147,10 @@
             this.quantidade,
             this.validade,
             this.tamanho});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 469);
+            this.dataGridView1.Size = new System.Drawing.Size(702, 436);
             this.dataGridView1.TabIndex = 1;
             // 
             // tipo
@@ -174,11 +178,41 @@
             this.tamanho.HeaderText = "Tamanho";
             this.tamanho.Name = "tamanho";
             // 
+            // butAdicionarAlimento
+            // 
+            this.butAdicionarAlimento.Location = new System.Drawing.Point(597, 48);
+            this.butAdicionarAlimento.Name = "butAdicionarAlimento";
+            this.butAdicionarAlimento.Size = new System.Drawing.Size(117, 35);
+            this.butAdicionarAlimento.TabIndex = 2;
+            this.butAdicionarAlimento.Text = "Adicionar Alimento";
+            this.butAdicionarAlimento.UseVisualStyleBackColor = true;
+            this.butAdicionarAlimento.Click += new System.EventHandler(this.butAdicionarAlimento_Click);
+            // 
+            // txtTeste
+            // 
+            this.txtTeste.Location = new System.Drawing.Point(12, 56);
+            this.txtTeste.Name = "txtTeste";
+            this.txtTeste.Size = new System.Drawing.Size(456, 20);
+            this.txtTeste.TabIndex = 3;
+            // 
+            // butCapturaLinha
+            // 
+            this.butCapturaLinha.Location = new System.Drawing.Point(474, 48);
+            this.butCapturaLinha.Name = "butCapturaLinha";
+            this.butCapturaLinha.Size = new System.Drawing.Size(117, 35);
+            this.butCapturaLinha.TabIndex = 4;
+            this.butCapturaLinha.Text = "Captura linha";
+            this.butCapturaLinha.UseVisualStyleBackColor = true;
+            this.butCapturaLinha.Click += new System.EventHandler(this.butCapturaLinha_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 538);
+            this.Controls.Add(this.butCapturaLinha);
+            this.Controls.Add(this.txtTeste);
+            this.Controls.Add(this.butAdicionarAlimento);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,6 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,6 +243,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn validade;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
+        private System.Windows.Forms.Button butAdicionarAlimento;
+        private System.Windows.Forms.TextBox txtTeste;
+        private System.Windows.Forms.Button butCapturaLinha;
     }
 }
 

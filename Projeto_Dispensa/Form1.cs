@@ -20,20 +20,23 @@ namespace Projeto_Dispensa
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            fcnCarregaGrid();
+            
         }
 
         private void fcnCarregaGrid()
         {
-            StreamReader csv = new StreamReader(@"C:\Users\User\Desktop\TESTE_CSV.csv");
-
-            string linha;
-            string[] campo;
-
-            while((linha = csv.ReadLine()) != null)
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                campo = linha.Split(';');
-                dataGridView1.Rows.Add(campo);
+                var sr = new StreamReader(ofd.FileName);
+                string linha;
+                string[] campo;
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    campo = linha.Split(';');
+                    dataGridView1.Rows.Add(campo);
+                }
             }
         }
 
@@ -52,6 +55,17 @@ namespace Projeto_Dispensa
         private void butMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void butAdicionarAlimento_Click(object sender, EventArgs e)
+        {
+            fcnCarregaGrid();
+        }
+
+        private void butCapturaLinha_Click(object sender, EventArgs e)
+        {
+            var a = dataGridView1.Rows[1].Cells[2].Value;
+            txtTeste.Text = (string)a;
         }
     }
 }
