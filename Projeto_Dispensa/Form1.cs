@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace Projeto_Dispensa
 
         private void fcnCarregaGrid()
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            /*OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 var sr = new StreamReader(ofd.FileName);
@@ -37,6 +38,32 @@ namespace Projeto_Dispensa
                     campo = linha.Split(';');
                     dataGridView1.Rows.Add(campo);
                 }
+            }
+            */
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var sr = new StreamReader(ofd.FileName);
+                string linha;                
+                List<Alimento> alimentos = new List<Alimento>();
+                Alimento alimento = new Alimento();
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    var line = linha;
+                    var values = line.Split(';');
+
+                    alimento.Tipo = values[0];
+                    alimento.Marca = values[1];
+                    alimento.Quantidade = Int32.Parse(values[2]);
+                    alimento.Validade = DateTime.Parse(values[3]);
+                    alimento.Tamanho = values[4];
+
+                    alimentos.Add(alimento);
+                    //listA.Add(values[]);
+                }
+                dataGridView1.DataSource = alimentos;
+
             }
         }
 

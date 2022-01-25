@@ -35,11 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butClose = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.butAdicionarAlimento = new System.Windows.Forms.Button();
             this.txtTeste = new System.Windows.Forms.TextBox();
             this.butCapturaLinha = new System.Windows.Forms.Button();
@@ -141,42 +136,11 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tipo,
-            this.marca,
-            this.quantidade,
-            this.validade,
-            this.tamanho});
             this.dataGridView1.Location = new System.Drawing.Point(12, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(702, 436);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo do Alimento";
-            this.tipo.Name = "tipo";
-            // 
-            // marca
-            // 
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.Name = "quantidade";
-            // 
-            // validade
-            // 
-            this.validade.HeaderText = "Validade";
-            this.validade.Name = "validade";
-            // 
-            // tamanho
-            // 
-            this.tamanho.HeaderText = "Tamanho";
-            this.tamanho.Name = "tamanho";
             // 
             // butAdicionarAlimento
             // 
@@ -237,11 +201,6 @@
         private System.Windows.Forms.Button butMaximize;
         private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn validade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
         private System.Windows.Forms.Button butAdicionarAlimento;
         private System.Windows.Forms.TextBox txtTeste;
         private System.Windows.Forms.Button butCapturaLinha;
