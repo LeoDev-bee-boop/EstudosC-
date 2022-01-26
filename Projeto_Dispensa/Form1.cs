@@ -92,10 +92,10 @@ namespace Projeto_Dispensa
             {
                 if(Convert.ToDateTime(row.Cells[3].Value) > DateTime.Now)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Green;
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
                 } else
                 {
-                    row.DefaultCellStyle.BackColor = Color.Red;
+                    row.DefaultCellStyle.BackColor = Color.LightCoral;
                 }
             }
         }
