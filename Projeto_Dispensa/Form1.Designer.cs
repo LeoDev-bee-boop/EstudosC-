@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.butMinimize = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.butMaximize = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.butClose = new System.Windows.Forms.Button();
             this.dgvDispensa = new System.Windows.Forms.DataGridView();
             this.butAdicionarAlimento = new System.Windows.Forms.Button();
             this.txtTeste = new System.Windows.Forms.TextBox();
             this.butCapturaLinha = new System.Windows.Forms.Button();
+            this.butMinimize = new System.Windows.Forms.Button();
+            this.butMaximize = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.butClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDispensa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +56,61 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(66, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Dispensa Inteligênte";
+            // 
+            // dgvDispensa
+            // 
+            this.dgvDispensa.AllowUserToAddRows = false;
+            this.dgvDispensa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDispensa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDispensa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDispensa.Location = new System.Drawing.Point(12, 90);
+            this.dgvDispensa.Name = "dgvDispensa";
+            this.dgvDispensa.RowHeadersVisible = false;
+            this.dgvDispensa.Size = new System.Drawing.Size(702, 436);
+            this.dgvDispensa.TabIndex = 1;
+            // 
+            // butAdicionarAlimento
+            // 
+            this.butAdicionarAlimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butAdicionarAlimento.Location = new System.Drawing.Point(597, 49);
+            this.butAdicionarAlimento.Name = "butAdicionarAlimento";
+            this.butAdicionarAlimento.Size = new System.Drawing.Size(117, 35);
+            this.butAdicionarAlimento.TabIndex = 2;
+            this.butAdicionarAlimento.Text = "Adicionar Alimento";
+            this.butAdicionarAlimento.UseVisualStyleBackColor = true;
+            this.butAdicionarAlimento.Click += new System.EventHandler(this.butAdicionarAlimento_Click);
+            // 
+            // txtTeste
+            // 
+            this.txtTeste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTeste.Location = new System.Drawing.Point(12, 56);
+            this.txtTeste.Name = "txtTeste";
+            this.txtTeste.Size = new System.Drawing.Size(456, 20);
+            this.txtTeste.TabIndex = 3;
+            // 
+            // butCapturaLinha
+            // 
+            this.butCapturaLinha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butCapturaLinha.Location = new System.Drawing.Point(474, 48);
+            this.butCapturaLinha.Name = "butCapturaLinha";
+            this.butCapturaLinha.Size = new System.Drawing.Size(117, 35);
+            this.butCapturaLinha.TabIndex = 4;
+            this.butCapturaLinha.Text = "Captura linha";
+            this.butCapturaLinha.UseVisualStyleBackColor = true;
             // 
             // butMinimize
             // 
@@ -73,17 +128,6 @@
             this.butMinimize.TabIndex = 4;
             this.butMinimize.UseVisualStyleBackColor = false;
             this.butMinimize.Click += new System.EventHandler(this.butMinimize_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(66, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Dispensa Inteligênte";
             // 
             // butMaximize
             // 
@@ -119,7 +163,7 @@
             this.butClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.butClose.BackColor = System.Drawing.Color.Transparent;
-            this.butClose.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.cross;
+            this.butClose.BackgroundImage = global::Projeto_Dispensa.Properties.Resources.cancel;
             this.butClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butClose.FlatAppearance.BorderSize = 0;
             this.butClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,43 +174,6 @@
             this.butClose.TabIndex = 2;
             this.butClose.UseVisualStyleBackColor = false;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);
-            // 
-            // dgvDispensa
-            // 
-            this.dgvDispensa.AllowUserToAddRows = false;
-            this.dgvDispensa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDispensa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDispensa.Location = new System.Drawing.Point(12, 90);
-            this.dgvDispensa.Name = "dgvDispensa";
-            this.dgvDispensa.RowHeadersVisible = false;
-            this.dgvDispensa.Size = new System.Drawing.Size(702, 436);
-            this.dgvDispensa.TabIndex = 1;
-            // 
-            // butAdicionarAlimento
-            // 
-            this.butAdicionarAlimento.Location = new System.Drawing.Point(597, 49);
-            this.butAdicionarAlimento.Name = "butAdicionarAlimento";
-            this.butAdicionarAlimento.Size = new System.Drawing.Size(117, 35);
-            this.butAdicionarAlimento.TabIndex = 2;
-            this.butAdicionarAlimento.Text = "Adicionar Alimento";
-            this.butAdicionarAlimento.UseVisualStyleBackColor = true;
-            this.butAdicionarAlimento.Click += new System.EventHandler(this.butAdicionarAlimento_Click);
-            // 
-            // txtTeste
-            // 
-            this.txtTeste.Location = new System.Drawing.Point(12, 56);
-            this.txtTeste.Name = "txtTeste";
-            this.txtTeste.Size = new System.Drawing.Size(456, 20);
-            this.txtTeste.TabIndex = 3;
-            // 
-            // butCapturaLinha
-            // 
-            this.butCapturaLinha.Location = new System.Drawing.Point(474, 48);
-            this.butCapturaLinha.Name = "butCapturaLinha";
-            this.butCapturaLinha.Size = new System.Drawing.Size(117, 35);
-            this.butCapturaLinha.TabIndex = 4;
-            this.butCapturaLinha.Text = "Captura linha";
-            this.butCapturaLinha.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -185,8 +192,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDispensa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

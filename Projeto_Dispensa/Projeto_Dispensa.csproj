@@ -85,16 +85,19 @@
     <None Include="Resources\green-technology.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Arquivos\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\minimize.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\maximize.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cross.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Arquivos\" />
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
