@@ -122,9 +122,9 @@
             this.butMinimize.FlatAppearance.BorderSize = 0;
             this.butMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butMinimize.ForeColor = System.Drawing.Color.Transparent;
-            this.butMinimize.Location = new System.Drawing.Point(585, 4);
+            this.butMinimize.Location = new System.Drawing.Point(630, 12);
             this.butMinimize.Name = "butMinimize";
-            this.butMinimize.Size = new System.Drawing.Size(42, 33);
+            this.butMinimize.Size = new System.Drawing.Size(24, 24);
             this.butMinimize.TabIndex = 4;
             this.butMinimize.UseVisualStyleBackColor = false;
             this.butMinimize.Click += new System.EventHandler(this.butMinimize_Click);
@@ -139,9 +139,9 @@
             this.butMaximize.FlatAppearance.BorderSize = 0;
             this.butMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butMaximize.ForeColor = System.Drawing.Color.Transparent;
-            this.butMaximize.Location = new System.Drawing.Point(633, 4);
+            this.butMaximize.Location = new System.Drawing.Point(660, 12);
             this.butMaximize.Name = "butMaximize";
-            this.butMaximize.Size = new System.Drawing.Size(42, 33);
+            this.butMaximize.Size = new System.Drawing.Size(24, 24);
             this.butMaximize.TabIndex = 3;
             this.butMaximize.UseVisualStyleBackColor = false;
             this.butMaximize.Click += new System.EventHandler(this.butMaximize_Click);
@@ -168,9 +168,9 @@
             this.butClose.FlatAppearance.BorderSize = 0;
             this.butClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butClose.ForeColor = System.Drawing.Color.Transparent;
-            this.butClose.Location = new System.Drawing.Point(681, 4);
+            this.butClose.Location = new System.Drawing.Point(690, 12);
             this.butClose.Name = "butClose";
-            this.butClose.Size = new System.Drawing.Size(42, 33);
+            this.butClose.Size = new System.Drawing.Size(24, 24);
             this.butClose.TabIndex = 2;
             this.butClose.UseVisualStyleBackColor = false;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);

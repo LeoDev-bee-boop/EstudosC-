@@ -14,6 +14,7 @@ namespace Projeto_Dispensa
 {
     public partial class Form1 : Form
     {
+        int aux = 0;
         public Form1()
         {
             InitializeComponent();
@@ -57,7 +58,16 @@ namespace Projeto_Dispensa
 
         private void butMaximize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            if(aux == 0)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                aux = 1;
+            } else
+            {
+                this.WindowState =  FormWindowState.Normal;
+                aux = 0;
+            }
+
         }
 
         private void butClose_Click(object sender, EventArgs e)
@@ -80,7 +90,13 @@ namespace Projeto_Dispensa
         {
             foreach(DataGridViewRow row in this.dgvDispensa.Rows)
             {
-               
+                if(Convert.ToDateTime(row.Cells[3].Value) > DateTime.Now)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                } else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
             }
         }
     }
