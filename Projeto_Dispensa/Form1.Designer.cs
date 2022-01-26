@@ -34,13 +34,13 @@
             this.butMaximize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butClose = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDispensa = new System.Windows.Forms.DataGridView();
             this.butAdicionarAlimento = new System.Windows.Forms.Button();
             this.txtTeste = new System.Windows.Forms.TextBox();
             this.butCapturaLinha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDispensa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,16 +131,16 @@
             this.butClose.UseVisualStyleBackColor = false;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);
             // 
-            // dataGridView1
+            // dgvDispensa
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 436);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvDispensa.AllowUserToAddRows = false;
+            this.dgvDispensa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDispensa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDispensa.Location = new System.Drawing.Point(12, 90);
+            this.dgvDispensa.Name = "dgvDispensa";
+            this.dgvDispensa.RowHeadersVisible = false;
+            this.dgvDispensa.Size = new System.Drawing.Size(702, 436);
+            this.dgvDispensa.TabIndex = 1;
             // 
             // butAdicionarAlimento
             // 
@@ -176,7 +176,7 @@
             this.Controls.Add(this.butCapturaLinha);
             this.Controls.Add(this.txtTeste);
             this.Controls.Add(this.butAdicionarAlimento);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDispensa);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -186,7 +186,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDispensa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Button butMinimize;
         private System.Windows.Forms.Button butMaximize;
         private System.Windows.Forms.Button butClose;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDispensa;
         private System.Windows.Forms.Button butAdicionarAlimento;
         private System.Windows.Forms.TextBox txtTeste;
         private System.Windows.Forms.Button butCapturaLinha;
