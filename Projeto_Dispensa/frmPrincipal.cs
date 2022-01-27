@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Projeto_Dispensa
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
         int aux = 0;
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -103,6 +103,18 @@ namespace Projeto_Dispensa
                     row.Cells[3].Style.BackColor = Color.LightCoral;
                 }
             }
+        }
+
+        private void butCapturaLinha_Click(object sender, EventArgs e)
+        {
+            frmIncluirUnicoAlimento incluirAlimento = new frmIncluirUnicoAlimento();
+            incluirAlimento.ShowDialog();
+        }
+
+        public void fcnPassaInfo(Alimento alimento)
+        {
+            //ERRO: é preciso inserir colunas no grid antes de adicionar valores nele
+            //this.dgvDispensa.Rows.Add(alimento);
         }
     }
 }
