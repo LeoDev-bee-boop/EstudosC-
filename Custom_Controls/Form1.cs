@@ -26,7 +26,7 @@ namespace Custom_Controls
             } else
             {
                 this.BackColor = Color.WhiteSmoke;
-                label1.ForeColor = Color.DimGray
+                label1.ForeColor = Color.DimGray;
             }
         }
     }
