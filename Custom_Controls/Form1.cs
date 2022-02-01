@@ -16,5 +16,18 @@ namespace Custom_Controls
         {
             InitializeComponent();
         }
+
+        private void rjToggleButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tbDarkTheme.Checked)
+            {
+                this.BackColor = Color.DimGray;
+                label1.ForeColor = Color.WhiteSmoke;
+            } else
+            {
+                this.BackColor = Color.WhiteSmoke;
+                label1.ForeColor = Color.DimGray
+            }
+        }
     }
 }
