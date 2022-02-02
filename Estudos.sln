@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Dispensa", "Projeto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom_Controls", "Custom_Controls\Custom_Controls.csproj", "{9C53EC9D-8E45-4C91-9400-647A2997C331}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGround", "PlayGround\PlayGround.csproj", "{8CBD9856-6711-4A67-BF38-75880EBBA35A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9C53EC9D-8E45-4C91-9400-647A2997C331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C53EC9D-8E45-4C91-9400-647A2997C331}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C53EC9D-8E45-4C91-9400-647A2997C331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBD9856-6711-4A67-BF38-75880EBBA35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBD9856-6711-4A67-BF38-75880EBBA35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBD9856-6711-4A67-BF38-75880EBBA35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBD9856-6711-4A67-BF38-75880EBBA35A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
