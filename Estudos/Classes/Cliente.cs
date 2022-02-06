@@ -27,6 +27,8 @@ namespace Classes
         public string Telefone;
         public string CPF;
 
+        private string sobrenome = "Santos";
+
         public void Gravar()
         {
             if(this.GetType() == typeof(Cliente)) 
@@ -51,12 +53,12 @@ namespace Classes
                 }
             } else
             {
-                var usuario = Usuario.LerClientes();
-                usuario.Add(this);
-
-                if (File.Exists(caminhoBaseClientes()))
+                var usuario = Usuario.lerUsuario();
+                Usuario u = new Usuario(this.Nome, this.Telefone, this.CPF);
+                usuario.Add(u);
+                if (File.Exists(caminhoBaseUsuario()))
                 {
-                    StreamWriter r = new StreamWriter(caminhoBaseClientes());
+                    StreamWriter r = new StreamWriter(caminhoBaseUsuario());
                     string conteudo = "nome;telefone;cpf;";
                     r.WriteLine(conteudo);
 
@@ -109,6 +111,31 @@ namespace Classes
                 }
             }
             return clientes;
+        }
+
+        public static List<Usuario> lerUsuario()
+        {
+            var usuarios = new List<Usuario>();
+            if (File.Exists(caminhoBaseUsuario()))
+            {
+                using (StreamReader arquivo = File.OpenText(caminhoBaseUsuario()))
+                {
+                    string linha;
+                    int i = 0;
+                    while ((linha = arquivo.ReadLine()) != null)
+                    {
+                        i++;
+                        if (i == 1) continue;
+                        var usuarioArquivo = linha.Split(';');
+
+                        //var cliente = new Cliente { Nome = clienteArquivo[0], Telefone = clienteArquivo[1], CPF = clienteArquivo[2] };
+                        //ou
+                        var usuario = new Usuario(usuarioArquivo[0], usuarioArquivo[1], usuarioArquivo[2]);
+                        usuarios.Add(usuario);
+                    }
+                }
+            }
+            return usuarios;
         }
     }
 }
