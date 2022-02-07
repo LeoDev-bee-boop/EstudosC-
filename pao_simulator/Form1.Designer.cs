@@ -155,6 +155,7 @@ namespace pao_simulator
             this.btnAbrirLista.TabIndex = 7;
             this.btnAbrirLista.Text = "Abrir lista";
             this.btnAbrirLista.UseVisualStyleBackColor = false;
+            this.btnAbrirLista.Click += new System.EventHandler(this.btnAbrirLista_Click);
             // 
             // Form1
             // 

@@ -9,6 +9,6 @@ namespace pao_simulator.Classes
     public class Usuario
     {
         public string Pessoa { get; set; }
-        public DateTime Ultimo_Dia { get; set; }
+        public DateTime Data { get; set; }
     }
 }
