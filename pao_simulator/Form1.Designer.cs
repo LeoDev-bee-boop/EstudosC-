@@ -30,7 +30,7 @@ namespace pao_simulator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,22 +38,21 @@ namespace pao_simulator
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panPrincipal = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnAbrirLista = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.panPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPrincipal
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(450, 387);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrincipal.Location = new System.Drawing.Point(12, 127);
+            this.dgvPrincipal.Name = "dgvPrincipal";
+            this.dgvPrincipal.Size = new System.Drawing.Size(450, 387);
+            this.dgvPrincipal.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
@@ -98,11 +97,9 @@ namespace pao_simulator
             // panPrincipal
             // 
             this.panPrincipal.BackColor = System.Drawing.Color.Bisque;
-            this.panPrincipal.Controls.Add(this.button3);
             this.panPrincipal.Controls.Add(this.label3);
-            this.panPrincipal.Controls.Add(this.button2);
             this.panPrincipal.Controls.Add(this.pictureBox1);
-            this.panPrincipal.Controls.Add(this.button1);
+            this.panPrincipal.Controls.Add(this.btnClose);
             this.panPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panPrincipal.Name = "panPrincipal";
@@ -120,30 +117,6 @@ namespace pao_simulator
             this.label3.TabIndex = 1;
             this.label3.Text = "Pão simulator";
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::pao_simulator.Properties.Resources.minus;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(352, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 23);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(401, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -156,17 +129,32 @@ namespace pao_simulator
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(439, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(441, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(21, 21);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnAbrirLista
+            // 
+            this.btnAbrirLista.BackColor = System.Drawing.Color.Bisque;
+            this.btnAbrirLista.FlatAppearance.BorderColor = System.Drawing.Color.Peru;
+            this.btnAbrirLista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnAbrirLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
+            this.btnAbrirLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirLista.Location = new System.Drawing.Point(12, 98);
+            this.btnAbrirLista.Name = "btnAbrirLista";
+            this.btnAbrirLista.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirLista.TabIndex = 7;
+            this.btnAbrirLista.Text = "Abrir lista";
+            this.btnAbrirLista.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -174,19 +162,20 @@ namespace pao_simulator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(474, 526);
+            this.Controls.Add(this.btnAbrirLista);
             this.Controls.Add(this.panPrincipal);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             this.panPrincipal.ResumeLayout(false);
             this.panPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -197,7 +186,7 @@ namespace pao_simulator
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -206,9 +195,8 @@ namespace pao_simulator
         private System.Windows.Forms.Panel panPrincipal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnAbrirLista;
     }
 }
 
