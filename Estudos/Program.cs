@@ -17,14 +17,39 @@ namespace console_app
     {
         static void Main(string[] args)
         {
-            Menu.Criar();
-            Usuario usu = new Usuario();
+            Console.WriteLine("==============Cadastro de Cliente==============");
+            Cliente c = new Cliente();
 
-            usu.Nome = "aa";
-            usu.Telefone = "213";
-            usu.CPF = "5495430";
+            c.Nome = "cliente 1";
+            c.Telefone = "123";
+            c.CPF = "123";
 
-            usu.Gravar();
+            c.Gravar();
+
+            foreach (Cliente us in Cliente.lerUsuario())
+            {
+                Console.WriteLine(us.Nome);
+                Console.WriteLine(us.Telefone);
+                Console.WriteLine(us.CPF);
+                Console.WriteLine("==============================");
+            }
+
+            Console.WriteLine("==============Cadastro de Usuário==============");
+            Usuario u = new Usuario();
+
+            u.Nome = "usuario 1";
+            u.Telefone = "234";
+            u.CPF = "234";
+
+            u.Gravar();
+
+            foreach(Usuario us in Usuario.lerUsuario())
+            {
+                Console.WriteLine(us.Nome);
+                Console.WriteLine(us.Telefone);
+                Console.WriteLine(us.CPF);
+                Console.WriteLine("==============================");
+            }
 
         }
 
