@@ -34,5 +34,24 @@ namespace Testes
         {
             return ConfigurationManager.AppSettings["CaminhoEmail"];
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            AlimentarGrid();
+        }
+
+        private void AlimentarGrid()
+        {
+            if (File.Exists(CaminhoBaseEmail()))
+            {
+                var sr = new StreamReader(CaminhoBaseEmail());
+                string linha;               
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    cbEmail.Items.Add(linha);
+                }
+            }
+        }
     }
 }
