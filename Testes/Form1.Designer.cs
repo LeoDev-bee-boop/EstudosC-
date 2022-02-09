@@ -37,7 +37,7 @@ namespace Testes
             // cbEmail
             // 
             this.cbEmail.FormattingEnabled = true;
-            this.cbEmail.Location = new System.Drawing.Point(12, 29);
+            this.cbEmail.Location = new System.Drawing.Point(12, 31);
             this.cbEmail.Name = "cbEmail";
             this.cbEmail.Size = new System.Drawing.Size(260, 21);
             this.cbEmail.TabIndex = 0;

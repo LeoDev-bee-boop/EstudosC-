@@ -21,13 +21,7 @@ namespace Testes
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (File.Exists(CaminhoBaseEmail()))
-            {
-                StreamWriter sr = new StreamWriter(CaminhoBaseEmail());
-                string email = cbEmail.Text;
-                sr.WriteLine(email);
-                sr.Close();
-            }
+            Gravar();
         }
 
         private static string CaminhoBaseEmail()
@@ -40,11 +34,53 @@ namespace Testes
             AlimentarGrid();
         }
 
+        private void Gravar()
+        {
+            //capturando todos os email já presentes no arquivo
+            var emails = LerEmail();
+            
+            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+            {
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+                {
+                    string email = cbEmail.Text;
+                    emails.Add(email);
+                    writer.WriteLine(emails);
+                    writer.Close();
+                }
+            }
+            else
+            {
+                string path = @"C:\Users\Leonardosevalhos\Documents\teste\emails.txt";
+                FileStream fs = File.Create(path);
+                Gravar();
+            }
+        }
+
+        private List<string> LerEmail()
+        {
+            var emails = new List<string>();
+
+            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+            {
+                using(StreamReader arquivo  = File.OpenText(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+                {
+                    string linha;
+                    while((linha = arquivo.ReadLine()) != null)
+                    {
+                        var linhaEmail = linha.Trim();
+                        emails.Add(linhaEmail);
+                    }
+                }
+            }
+            return emails;
+        }
+
         private void AlimentarGrid()
         {
-            if (File.Exists(CaminhoBaseEmail()))
+            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
             {
-                var sr = new StreamReader(CaminhoBaseEmail());
+                var sr = new StreamReader(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt");
                 string linha;               
 
                 while ((linha = sr.ReadLine()) != null)
