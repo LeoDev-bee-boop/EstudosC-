@@ -38,7 +38,14 @@ namespace Testes
         {
             //capturando todos os email já presentes no arquivo
             List<string> emails = LerEmail();
-            
+
+            //Verifica se o email na combo á foi digitado
+            if (fcnRetornaEmailExistente(emails))
+                return;
+
+            //Limpando a combo box
+            fcnLimparArquivoeCombo();
+
             if (File.Exists(CaminhoBaseEmail()))
             {
                 using (StreamWriter writer = new StreamWriter(CaminhoBaseEmail()))
@@ -99,6 +106,25 @@ namespace Testes
                 }
                 sr.Close();
             }
+        }
+
+        private bool fcnRetornaEmailExistente(List<string> emails)
+        {
+            string emailComboBox = cbEmail.Text;
+
+            foreach(string email in emails)
+            {
+                if (email == emailComboBox)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public void fcnLimparArquivoeCombo()
+        {
+            System.IO.File.WriteAllText(CaminhoBaseEmail(), string.Empty);
+            cbEmail.Items.Clear();
         }
     }
 }
