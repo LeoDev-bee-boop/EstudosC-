@@ -54,6 +54,8 @@ namespace Testes
                     
                     writer.Close();
                 }
+                //Atualizando Grid  
+                AlimentarComboBox();
             }
             else
             {
