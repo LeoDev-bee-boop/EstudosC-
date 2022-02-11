@@ -39,9 +39,9 @@ namespace Testes
             //capturando todos os email já presentes no arquivo
             List<string> emails = LerEmail();
             
-            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+            if (File.Exists(CaminhoBaseEmail()))
             {
-                using (StreamWriter writer = new StreamWriter(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+                using (StreamWriter writer = new StreamWriter(CaminhoBaseEmail()))
                 {
                     string emailNome = cbEmail.Text;
 
@@ -52,14 +52,12 @@ namespace Testes
                         writer.WriteLine(email);
                     }
                     
-                    
-                    
                     writer.Close();
                 }
             }
             else
             {
-                string path = @"C:\Users\Leonardosevalhos\Documents\teste\emails.txt";
+                string path = CaminhoBaseEmail();
                 FileStream fs = File.Create(path);
                 fs.Close();
                 Gravar();
@@ -70,9 +68,9 @@ namespace Testes
         {
             var emails = new List<string>();
 
-            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+            if (File.Exists(CaminhoBaseEmail()))
             {
-                using(StreamReader arquivo  = File.OpenText(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+                using(StreamReader arquivo  = File.OpenText(CaminhoBaseEmail()))
                 {
                     string linha;
                     while((linha = arquivo.ReadLine()) != null)
@@ -88,9 +86,9 @@ namespace Testes
 
         private void AlimentarComboBox()
         {
-            if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
+            if (File.Exists(CaminhoBaseEmail()))
             {
-                var sr = new StreamReader(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt");
+                var sr = new StreamReader(CaminhoBaseEmail());
                 string linha;               
 
                 while ((linha = sr.ReadLine()) != null)
