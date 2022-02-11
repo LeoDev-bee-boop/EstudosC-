@@ -37,7 +37,7 @@ namespace Testes
             // cbEmail
             // 
             this.cbEmail.FormattingEnabled = true;
-            this.cbEmail.Location = new System.Drawing.Point(12, 31);
+            this.cbEmail.Location = new System.Drawing.Point(12, 29);
             this.cbEmail.Name = "cbEmail";
             this.cbEmail.Size = new System.Drawing.Size(260, 21);
             this.cbEmail.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Testes
             // 
             this.btnGravar.Location = new System.Drawing.Point(278, 29);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(75, 23);
+            this.btnGravar.Size = new System.Drawing.Size(75, 21);
             this.btnGravar.TabIndex = 2;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;

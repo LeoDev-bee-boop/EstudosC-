@@ -31,21 +31,29 @@ namespace Testes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            AlimentarGrid();
+            AlimentarComboBox();
         }
 
         private void Gravar()
         {
             //capturando todos os email já presentes no arquivo
-            var emails = LerEmail();
+            List<string> emails = LerEmail();
             
             if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
             {
                 using (StreamWriter writer = new StreamWriter(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
                 {
-                    string email = cbEmail.Text;
-                    emails.Add(email);
-                    writer.WriteLine(emails);
+                    string emailNome = cbEmail.Text;
+
+                    emails.Add(emailNome);
+
+                    foreach (string email in emails)
+                    {
+                        writer.WriteLine(email);
+                    }
+                    
+                    
+                    
                     writer.Close();
                 }
             }
@@ -53,6 +61,7 @@ namespace Testes
             {
                 string path = @"C:\Users\Leonardosevalhos\Documents\teste\emails.txt";
                 FileStream fs = File.Create(path);
+                fs.Close();
                 Gravar();
             }
         }
@@ -71,12 +80,13 @@ namespace Testes
                         var linhaEmail = linha.Trim();
                         emails.Add(linhaEmail);
                     }
+                    arquivo.Close();
                 }
             }
             return emails;
         }
 
-        private void AlimentarGrid()
+        private void AlimentarComboBox()
         {
             if (File.Exists(@"C:\Users\Leonardosevalhos\Documents\teste\emails.txt"))
             {
@@ -87,6 +97,7 @@ namespace Testes
                 {
                     cbEmail.Items.Add(linha);
                 }
+                sr.Close();
             }
         }
     }
