@@ -38,6 +38,7 @@ namespace Testes
             // 
             this.cbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbEmail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbEmail.FormattingEnabled = true;
             this.cbEmail.Location = new System.Drawing.Point(12, 29);
             this.cbEmail.Name = "cbEmail";
