@@ -21,7 +21,7 @@ namespace Testes
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            Gravar();
+            GravarEmail();
         }
 
         private static string CaminhoBaseEmail()
@@ -34,7 +34,7 @@ namespace Testes
             AlimentarComboBox();
         }
 
-        private void Gravar()
+        private void GravarEmail()
         {
             //capturando todos os email já presentes no arquivo
             List<string> emails = LerEmail();
@@ -69,7 +69,7 @@ namespace Testes
                 string path = CaminhoBaseEmail();
                 FileStream fs = File.Create(path);
                 fs.Close();
-                Gravar();
+                GravarEmail();
             }
         }
 

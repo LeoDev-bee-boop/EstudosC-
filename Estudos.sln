@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom_Controls", "Custom_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pao_simulator", "pao_simulator\pao_simulator.csproj", "{AC1D55E8-AC49-4C32-AD70-B1D654EAAD21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "Testes\Testes.csproj", "{EE276E33-4245-4BF1-B492-B732C69882C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combo_Box_Autocomplete", "Testes\Combo_Box_Autocomplete.csproj", "{EE276E33-4245-4BF1-B492-B732C69882C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
