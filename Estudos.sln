@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pao_simulator", "pao_simula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combo_Box_Autocomplete", "Testes\Combo_Box_Autocomplete.csproj", "{EE276E33-4245-4BF1-B492-B732C69882C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes_Capturar_Componentes_Dinamicos", "Testes_Capturar_Componentes_Dinamicos\Testes_Capturar_Componentes_Dinamicos.csproj", "{EDFC39EC-7475-4125-A6A9-D436A298E09B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EE276E33-4245-4BF1-B492-B732C69882C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE276E33-4245-4BF1-B492-B732C69882C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE276E33-4245-4BF1-B492-B732C69882C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFC39EC-7475-4125-A6A9-D436A298E09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFC39EC-7475-4125-A6A9-D436A298E09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFC39EC-7475-4125-A6A9-D436A298E09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFC39EC-7475-4125-A6A9-D436A298E09B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
