@@ -64,7 +64,7 @@ namespace Testes_Capturar_Componentes_Dinamicos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.Write
+
         }
     }
 }
