@@ -29,11 +29,36 @@ namespace Custom_Controls
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbDarkTheme = new Custom_Controls.RJControls.RJToggleButton();
             this.rjToggleButton2 = new Custom_Controls.RJControls.RJToggleButton();
             this.rjToggleButton1 = new Custom_Controls.RJControls.RJToggleButton();
-            this.tbDarkTheme = new Custom_Controls.RJControls.RJToggleButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(608, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Theme:";
+            // 
+            // tbDarkTheme
+            // 
+            this.tbDarkTheme.AutoSize = true;
+            this.tbDarkTheme.Location = new System.Drawing.Point(611, 214);
+            this.tbDarkTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.tbDarkTheme.Name = "tbDarkTheme";
+            this.tbDarkTheme.OffBackColor = System.Drawing.Color.Gold;
+            this.tbDarkTheme.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.tbDarkTheme.OnBackColor = System.Drawing.Color.Aqua;
+            this.tbDarkTheme.OnToggleColor = System.Drawing.Color.Gold;
+            this.tbDarkTheme.Size = new System.Drawing.Size(101, 22);
+            this.tbDarkTheme.TabIndex = 2;
+            this.tbDarkTheme.Text = "rjToggleButton3";
+            this.tbDarkTheme.UseVisualStyleBackColor = true;
+            this.tbDarkTheme.CheckedChanged += new System.EventHandler(this.rjToggleButton3_CheckedChanged);
             // 
             // rjToggleButton2
             // 
@@ -63,31 +88,6 @@ namespace Custom_Controls
             this.rjToggleButton1.TabIndex = 0;
             this.rjToggleButton1.Text = "rjToggleButton1";
             this.rjToggleButton1.UseVisualStyleBackColor = true;
-            // 
-            // tbDarkTheme
-            // 
-            this.tbDarkTheme.AutoSize = true;
-            this.tbDarkTheme.Location = new System.Drawing.Point(611, 214);
-            this.tbDarkTheme.MinimumSize = new System.Drawing.Size(45, 22);
-            this.tbDarkTheme.Name = "tbDarkTheme";
-            this.tbDarkTheme.OffBackColor = System.Drawing.Color.Gold;
-            this.tbDarkTheme.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbDarkTheme.OnBackColor = System.Drawing.Color.Aqua;
-            this.tbDarkTheme.OnToggleColor = System.Drawing.Color.Gold;
-            this.tbDarkTheme.Size = new System.Drawing.Size(101, 22);
-            this.tbDarkTheme.TabIndex = 2;
-            this.tbDarkTheme.Text = "rjToggleButton3";
-            this.tbDarkTheme.UseVisualStyleBackColor = true;
-            this.tbDarkTheme.CheckedChanged += new System.EventHandler(this.rjToggleButton3_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(608, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Theme:";
             // 
             // Form1
             // 
