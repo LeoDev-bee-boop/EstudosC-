@@ -65,6 +65,7 @@ namespace automacao_youtube
             this.dgvVideo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVideo.Location = new System.Drawing.Point(12, 43);
             this.dgvVideo.Name = "dgvVideo";
+            this.dgvVideo.RowHeadersVisible = false;
             this.dgvVideo.Size = new System.Drawing.Size(500, 208);
             this.dgvVideo.TabIndex = 3;
             // 
@@ -78,7 +79,7 @@ namespace automacao_youtube
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formYouTube";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YouTube";
             this.Load += new System.EventHandler(this.formYouTube_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).EndInit();

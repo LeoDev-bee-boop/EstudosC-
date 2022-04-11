@@ -33,42 +33,40 @@ namespace automacao_youtube
                 IWebElement firstResult = driver.FindElement(By.CssSelector("h3"));
                 Console.WriteLine(firstResult.GetAttribute("textContent"));
                 */
-
+                WebDriverWait _wait = new WebDriverWait(driver, new TimeSpan(0, 1, 0));
                 List<Video> listaVideos = new List<Video>();
                 Video video = new Video();
                 //espera em até 10 segunc
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
 
                 //=================================================================================
                 //navega até a página do youtube
                 driver.Navigate().GoToUrl("https://www.youtube.com/");
 
                 //clica no primeiro vídeo
+                _wait.Until(d => d.FindElement(By.Id("meta")));
+
                 driver.FindElement(By.XPath("//*[@id='video-title']")).Click();
 
-                //captura o título do vídeo
+                //captura o título e URL do vídeo
                 IWebElement element = driver.FindElement(By.XPath("//*[@id='container']/h1/yt-formatted-string"));
 
                 video.Titulo = element.Text;
                 video.URL = driver.Url;
 
-                
-
-                
-
                 driver.Navigate().Back();
-                //=================================================================================
 
+                listaVideos.Add(video);
 
-
-
-
-
-                //dgvVideo.DataSource = navegation(driver, listaVideos);
-
-
+                //Salva título do vídeo
+                adicionarVideoGrid(listaVideos);
+                
             }
+        }
+
+        private void adicionarVideoGrid(List<Video> videos)
+        {
+            dgvVideo.DataSource = videos;
         }
 
         private List<Video> navegation(IWebDriver driver, List<Video> listaVideos)
