@@ -25,38 +25,43 @@ namespace automacao_youtube
         {
             using (IWebDriver driver = new FirefoxDriver())
             {
-                /*
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-                driver.Navigate().GoToUrl("https://www.google.com/ncr");
-                //driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-                wait.Until(webDriver => webDriver.FindElement(By.CssSelector("h3")).Displayed);
-                IWebElement firstResult = driver.FindElement(By.CssSelector("h3"));
-                Console.WriteLine(firstResult.GetAttribute("textContent"));
-                */
                 WebDriverWait _wait = new WebDriverWait(driver, new TimeSpan(0, 1, 0));
                 List<Video> listaVideos = new List<Video>();
                 Video video = new Video();
-                //espera em até 10 segunc
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
-                //=================================================================================
+                IWebElement element;
+                //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+                
                 //navega até a página do youtube
                 driver.Navigate().GoToUrl("https://www.youtube.com/");
 
-                //clica no primeiro vídeo
-                _wait.Until(d => d.FindElement(By.Id("meta")));
+                
 
-                driver.FindElement(By.XPath("//*[@id='video-title']")).Click();
+                //Capturando o título do vídeo dinâmicamente
+                for (int i = 1; i <= 4; i++)
+                {
+                    string xpathColuna = @"/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/
+                                            ytd-two-column-browse-results-renderer/div[1]/ytd-rich-grid-renderer/
+                                            div[6]/ytd-rich-grid-row[1]/div/ytd-rich-item-renderer[" + i + "]/div/" +
+                                            "ytd-rich-grid-media/div[1]/div[2]/div[1]/h3/a/yt-formatted-string";
+                    //Clica no vídeo
+                    driver.FindElement(By.XPath(xpathColuna)).Click();
 
-                //captura o título e URL do vídeo
-                IWebElement element = driver.FindElement(By.XPath("//*[@id='container']/h1/yt-formatted-string"));
+                    //_wait.Until(d => d.FindElement(By.XPath(xpathColuna)));
+                    string tituliVideo = "//*[@id='container']/h1/yt-formatted-string";
 
-                video.Titulo = element.Text;
-                video.URL = driver.Url;
 
-                driver.Navigate().Back();
+                    element = driver.FindElement(By.XPath(tituliVideo));
 
-                listaVideos.Add(video);
+                    
+                    video.Titulo = element.Text;
+                    video.URL = driver.Url;
+
+                    driver.Navigate().Back();
+
+                    listaVideos.Add(video);
+                }
+
+
 
                 //Salva título do vídeo
                 adicionarVideoGrid(listaVideos);
